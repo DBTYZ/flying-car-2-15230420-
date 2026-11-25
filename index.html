@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>飞行汽车安全分析：小鹏陆地航母</title>
+    <style>
+        body{font-family:"Microsoft Yahei",sans-serif;max-width:1100px;margin:0 auto;padding:24px;background:#f7f9fc;color:#222;line-height:1.7;}
+        h1{color:#1a4b97;border-left:6px solid #3474d9;padding-left:12px;}
+        h2{color:#2b579a;margin-top:32px;border-bottom:1px solid #cce0ff;padding-bottom:6px;}
+        .box{background:#fff;padding:20px;border-radius:10px;box-shadow:0 2px 10px #00000012;margin:16px 0;}
+        .good{color:#008844;font-weight:bold;}
+        .bad{color:#c23b22;font-weight:bold;}
+        table{width:100%;border-collapse: collapse;margin:12px 0;}
+        th,td{border:1px solid #ccc;padding:8px;text-align:center;}
+        th{background:#eef4ff;}
+    </style>
+</head>
+<body>
+    <h1>针对小鹏「陆地航母」分体式飞行汽车的全方位安全分析</h1>
+    <div class="box">
+        <h2>1. 产品简介</h2>
+        <p>小鹏陆地航母是分体式空地一体飞行汽车，由载人陆行底盘+可分离飞行舱两部分组成；飞行舱采用多旋翼垂直起降，底盘负责地面行驶、电池补给、停机保护。本分析基于系统安全工程思路，识别危险、评估风险、给出安全控制方案。</p>
+    </div>
+    <div class="box">
+        <h2>2. 危险识别（HAZOP）</h2>
+        <ul>
+            <li>动力危险：飞行舱多旋翼电机失效、电池热失控、供电中断</li>
+            <li>结构危险：空中舱体与底盘分离锁机构失效、连接结构断裂</li>
+            <li>飞行环境危险：大风、侧风、雷雨、能见度不足导致失控</li>
+            <li>地面交互危险：底盘行驶碰撞、自动对接对位偏差、人员卷入旋翼</li>
+            <li>控制与软件危险：飞控算法bug、传感器失效、通信链路中断</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>3. FMEA失效模式与风险分析</h2>
+        <table>
+            <tr><th>子系统</th><th>失效模式</th><th>后果</th><th>风险等级</th></tr>
+            <tr><td>旋翼动力系统</td><td>单电机停转</td><td>姿态失稳，迫降</td><td>高</td></tr>
+            <tr><td>舱体锁紧机构</td><td>空中意外解锁</td><td>分体分离，坠机</td><td>极高</td></tr>
+            <tr><td>动力电池</td><td>电芯热失控</td><td>起火爆炸</td><td>高</td></tr>
+            <tr><td>环境感知传感器</td><td>雷达/视觉失效</td><td>障碍物碰撞</td><td>中高</td></tr>
+        </table>
+    </div>
+    <div class="box">
+        <h2>4. 安全防护设计</h2>
+        <ul>
+            <li class="good">动力冗余：多旋翼布局，单电机故障仍可维持可控迫降</li>
+            <li class="good">双重锁止：机械锁+电子锁双重冗余，空中解锁需要多重校验</li>
+            <li class="good">电池安全：隔热舱、热蔓延抑制、BMS主动温控、过压过流保护</li>
+            <li class="good">感知冗余：激光雷达+视觉+毫米波雷达多传感器融合</li>
+            <li class="good">空域安全：限定低空航线，电子围栏，禁飞区隔离</li>
+        </ul>
+    </div>
+    <div class="box">
+        <h2>5. 应急安全方案</h2>
+        <p>配备应急降落规划算法，故障后自动搜索就近安全区域；预留降落伞应急系统；地面底盘具备紧急切断对接功能；机载告警系统，故障分级提醒乘员。</p>
+    </div>
+    <div class="box">
+        <h2>6. 总结</h2>
+        <p>分体式飞行汽车最大独特风险来自“分离对接机构”，是区别于普通无人机、普通汽车的安全重点。依靠冗余设计、故障预判、多级防护可以降低风险，但复杂气象、软件逻辑缺陷依旧是长期安全难点，需要持续开展系统安全验证与适航测试。</p>
+    </div>
+</body>
+</html>
